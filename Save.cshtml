@@ -1,0 +1,40 @@
+﻿@model moshtari
+
+<h2>Welcome</h2>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+            
+
+
+                <tr>
+                    <td>@Model.Id</td>
+                    <td>@Model.Name</td>
+                    <td>@Model.Username</td>
+                    <td>@Model.Password</td>
+                    <td>@Model.PhoneNumber</td>
+                </tr>
+            
+        </tbody>
+    </table>
+    <a asp-action="sabtkala">ثبت کالا</a>
+    <br />
+    <a asp-action="ListKala">مشاهده کالا ها</a>
+    <br />
+    <a asp-action="search">search</a>
+    <br />
+    <a asp-action="delete">delete</a>
+
+</div>

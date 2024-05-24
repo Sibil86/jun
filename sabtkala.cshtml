@@ -1,0 +1,61 @@
+﻿@model kala
+
+<style>
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+        .form-container input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .form-container button[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+    .validation-message {
+        color: red;
+    }
+</style>
+
+<div class="form-container">
+    <form asp-action="Product" asp-controller="Home" method="post">
+        <input asp-for="Name" type="text" placeholder="نام کالا" />
+        <br />
+        <span class="validation-message" asp-validation-for="Name"></span>
+        <input asp-for="Price" type="text" placeholder="قیمت کالا" />
+        <br />
+        <span class="validation-message" asp-validation-for="Price"></span>
+        <input asp-for="Description" type="text" placeholder="توضیحات کالا" />
+        <br />
+        <span class="validation-message" asp-validation-for="Description"></span>
+        <div class="form-group">
+            <label>عکس کالا:</label>
+            <input type="file" asp-for="ImagePath" class="form-control-file" />
+        </div>
+        <button type="submit">ثبت کالا</button>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

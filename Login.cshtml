@@ -1,0 +1,14 @@
+﻿@model moshtari
+
+<div class="container">
+    <form asp-action="Login" asp-controller="Home" method="post" class="login-form">
+        <div class="form-group">
+            <input asp-for="Username" type="text" class="form-control" placeholder="Username" />
+        </div>
+        <div class="form-group">
+            <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <a asp-action="Edit" class="forgot-password">Forgot Password</a>
+</div>

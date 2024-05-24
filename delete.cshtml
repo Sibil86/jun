@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model kala
+
+<style>
+    /* اینجا CSS را اضافه کنید */
+    form {
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    input[type="text"] {
+        width: 200px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 20px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #d32f2f;
+        }
+</style>
+
+<form asp-action="delete" asp-controller="Home" method="post">
+    <input asp-for="Id" type="text" placeholder="شناسه" />
+    <button type="submit">حذف</button>
+</form>
